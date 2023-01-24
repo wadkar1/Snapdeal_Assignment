@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite" thread-count="5">
+	<listeners>
+		<listener class-name="com.sf.utility.RetryListenerClass" />
+		<listener class-name="com.sf.utility.ExecutionListener" />
+		<listener class-name="com.sf.utility.EmailableReport"/>
+	</listeners>
+	<test name="flipkart">
+		<classes>
+			<class name="login.Flipkart_Login" />
+		</classes>
+	</test>
+</suite>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<TestCases>
+
+	<snapdeal>
+		<username>ram1@yopmail.com</username>
+		<mailname>Ram1</mailname>
+		<mailurl>https://yopmail.com/wm</mailurl>
+	</snapdeal>
+
+</TestCases>

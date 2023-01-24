@@ -1,0 +1,12 @@
+.classpath
+.project
+.settings/
+debug.log
+logs/*
+target/*
+src/ExtentReport/*
+test-output/*
+/Environment.xls
+/target/
+Reports/
+/bin/
