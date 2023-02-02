@@ -29,8 +29,8 @@ public class LoginPage extends ObjectRepository {
 
 
 	public LoginPage(WebDriver driver, Logger log) throws IOException {
-		super("Flipkart.properties");
-		obj = new ObjectRepository("Flipkart.properties");
+		super("Snapdeal.properties");
+		obj = new ObjectRepository("Snapdeal.properties");
 		this.log = log;
 		this.driver = driver;
 		functions = new Functions();

@@ -62,7 +62,7 @@ public class LoginTest extends TestBase {
 		test.log(Status.PASS, "User enters the OTP successfully");
 		
 		test.log(Status.INFO, "Clicking on Submit button");
-		fp.clickContinue();
+		fp.clickSubmit();
 		test.log(Status.PASS, "Submit button is clicked successfully");
 		
 		test.log(Status.INFO, "Clicking on mens fashion");
