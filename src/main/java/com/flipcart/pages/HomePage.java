@@ -29,14 +29,15 @@ public class HomePage extends ObjectRepository {
 	ObjectRepository obj;
 
 	public HomePage(WebDriver driver, Logger log) throws IOException {
-		super("Flipkart.properties");
-		obj = new ObjectRepository("Flipkart.properties");
+		super("Snapdeal.properties");
+		obj = new ObjectRepository("Snapdeal.properties");
 		this.log = log;
 		this.driver = driver;
 		functions = new Functions();
 		element_Actions = new ElementActions(driver);
 	}
-	public void clickOnMenFashion() {
+	public void clickOnMenFashion() throws InterruptedException {
+		Thread.sleep(2000);
 		log.info("Clicking on Men's fashion");
 		Actions act= new Actions(driver);
 		WebElement mensfashion=element_Actions.findElement(obj.getElement("menas_fashion"));
@@ -57,7 +58,7 @@ public class HomePage extends ObjectRepository {
 	}
 	public void clickOnAddToCart() throws InterruptedException {
 		log.info("Clicking Add to cart Button");
-		element_Actions.switchToDesiredWindow(1);
+		element_Actions.switchToDesiredWindow(2);
 		Thread.sleep(2000);
 		element_Actions.waitUntilVisibilityLocated(obj.getElement("add_to_cart"));
 		element_Actions.findElement(obj.getElement("add_to_cart"));
@@ -83,7 +84,9 @@ public class HomePage extends ObjectRepository {
 		element_Actions.waitUntilVisibilityLocated(obj.getElement("subtotal"));
 		WebElement subtotal=element_Actions.findElement(obj.getElement("subtotal"));
 		String price1 = subtotal.getText();
-		int price=new Functions().convertStringToInteger(price1);
+		String abc=price1.replaceAll("[^0-9]","");
+		System.out.println("========"+abc+"========");
+		int price= functions.convertStringToInteger(abc);
 		log.info("View to cart Button is clicked successfully");
 		return price;
 	}
